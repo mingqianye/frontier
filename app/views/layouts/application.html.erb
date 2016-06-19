@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>frontier</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <%= javascript_include_tag 'https://npmcdn.com/isotope-layout@3.0/dist/isotope.pkgd.min.js' %>
+  <%= stylesheet_link_tag 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css' %>
+  <%= javascript_include_tag "init_isotope" %>
+</head>
+<body>
+  <div class="container">
+    <%= render partial: "elements/navbar" %>
+    <%= yield %>
+    <%# render partial: "elements/footer" %>
+  </div>
+</body>
+</html>

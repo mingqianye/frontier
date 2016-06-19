@@ -1,0 +1,5 @@
+<h1> blogger posts </h1>
+<%= link_to "Post your own image", "#{DISCOURSEHOST}/new-topic?title=topic%20title&body=topic%20body&tags=#{params[:tags].join(',')}" %>
+<div class="grid">
+  <%= render partial: 'partials/card', collection: @cards %>
+</div>

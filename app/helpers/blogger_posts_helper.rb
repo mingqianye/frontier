@@ -1,0 +1,2 @@
+module BloggerPostsHelper
+end
