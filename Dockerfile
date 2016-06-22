@@ -1,13 +1,8 @@
-FROM ruby:2.3
+FROM ruby:2.3.1
 
-# throw errors if Gemfile has been modified since Gemfile.lock
-RUN bundle config --global frozen 1
-
-RUN mkdir -p /usr/src/app
-WORKDIR /usr/src/app
-
-ONBUILD COPY Gemfile /usr/src/app/
-ONBUILD COPY Gemfile.lock /usr/src/app/
-ONBUILD RUN bundle install
-
-ONBUILD COPY . /usr/src/app
+ADD . /app
+WORKDIR /app
+RUN gem install bundler
+RUN bash -l -c "bundle install --without development test"
+EXPOSE 8081
+ENTRYPOINT bundle exec unicorn -E production -p 8081
