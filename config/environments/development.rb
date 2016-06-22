@@ -35,9 +35,9 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
-  DISCOURSEHOST  = 'http://spicyfox.com'
-  SSO_URL        = "#{DISCOURSEHOST}/session/sso_provider"
-  SSO_SECRET     = '98yfuf2h809239h8bgre'
+  DISCOURSE_HOST         = 'http://spicyfox.com'
+  DISCOURSE_SSO_URL      = "#{DISCOURSE_HOST}/session/sso_provider"
+  DISCOURSE_SSO_SECRET   = '98yfuf2h809239h8bgre'
   DISCOURSE_API_KEY      = '5bd5aefe75d97fb96c5f0aed32964c9998f270b79fb5a3ad5e95a73eeecc9198'
   DISCOURSE_API_USERNAME = 'spicyfox.admin'
 end
