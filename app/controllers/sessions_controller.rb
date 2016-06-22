@@ -1,3 +1,4 @@
+require 'sso_end_point'
 class SessionsController < ApplicationController
   def index
     sso_end_point = SsoEndPoint.new(
