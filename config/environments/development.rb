@@ -38,4 +38,6 @@ Rails.application.configure do
   DISCOURSEHOST  = 'http://spicyfox.com'
   SSO_URL        = "#{DISCOURSEHOST}/session/sso_provider"
   SSO_SECRET     = '98yfuf2h809239h8bgre'
+  DISCOURSE_API_KEY      = '5bd5aefe75d97fb96c5f0aed32964c9998f270b79fb5a3ad5e95a73eeecc9198'
+  DISCOURSE_API_USERNAME = 'spicyfox.admin'
 end
