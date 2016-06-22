@@ -6,7 +6,7 @@ class TopicQueryBuilder
 
   def query
     raise 'Unable to build a discourse topic query without topic_id' if @topic_id.blank?
-    query_string = "#{DISCOURSE_HOST}/t/#{@topic_id}.json"
+    query_string = "#{Settings.discourse.host}/t/#{@topic_id}.json"
     DiscourseQuery.new(query_string)
   end
 end

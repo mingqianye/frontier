@@ -10,7 +10,7 @@ class DiscourseTopicParser
   def image_url
     url = @topic_hash.fetch('image_url')
     return url if url.start_with?('http')
-    "#{DISCOURSE_HOST}/#{url}"
+    "#{Settings.discourse.host}/#{url}"
   end
 
   def pointer_tags

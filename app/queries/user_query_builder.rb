@@ -6,7 +6,7 @@ class UserQueryBuilder
 
   def query
     raise 'Unable to build a discourse user query without username' if @username.blank?
-    query_string = "#{DISCOURSE_HOST}/users/#{@username}.json"
+    query_string = "#{Settings.discourse.host}/users/#{@username}.json"
     DiscourseQuery.new(query_string)
   end
 end

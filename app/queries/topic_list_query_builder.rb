@@ -4,7 +4,7 @@ class TopicListQueryBuilder
   end
 
   def query
-    query_string = "#{DISCOURSE_HOST}/c/#{@category_string}.json"
+    query_string = "#{Settings.discourse.host}/c/#{@category_string}.json"
     DiscourseQuery.new(query_string)
   end
 end

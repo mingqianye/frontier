@@ -6,7 +6,7 @@ class LogoutUserQueryBuilder
 
   def query
     raise 'Unable to build a discourse user query without username' if @user_id.blank?
-    query_string = "#{DISCOURSE_HOST}/admin/users/#{@user_id}/log_out?api_key=#{DISCOURSE_API_KEY}&api_username=#{DISCOURSE_API_USERNAME}"
+    query_string = "#{Settings.discourse.host}/admin/users/#{@user_id}/log_out?api_key=#{Settings.discourse.api_key}&api_username=#{Settings.discourse.api_username}"
     DiscourseQuery.new(query_string, :post)
   end
 end

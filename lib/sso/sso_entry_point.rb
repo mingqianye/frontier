@@ -13,6 +13,6 @@ class SsoEntryPoint
     base64_encoded_payload = Base64.encode64(raw_payload)
     url_encoded_payload    = URI.escape(base64_encoded_payload)
     payload_signiture      = SsoUtils.get_hmac_hex_string(base64_encoded_payload)
-    "#{DISCOURSE_SSO_URL}?sso=#{url_encoded_payload}&sig=#{payload_signiture}"
+    "#{Settings.discourse.sso_url}?sso=#{url_encoded_payload}&sig=#{payload_signiture}"
   end
 end

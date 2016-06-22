@@ -7,7 +7,6 @@ class UserService
     end
 
     def log_out_user_by_id(id)
-      byebug
       LogoutUserQueryBuilder.new.add_user_id(id).query.run
     end
   end
