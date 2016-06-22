@@ -35,7 +35,7 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
-  DISCOURSEHOST  = 'http://discourse.dryhtml.com'
+  DISCOURSEHOST  = 'http://spicyfox.com'
   SSO_URL        = "#{DISCOURSEHOST}/session/sso_provider"
-  SSO_SECRET     = '1234567890'
+  SSO_SECRET     = '98yfuf2h809239h8bgre'
 end

@@ -1,8 +1,5 @@
 class LandingController < ApplicationController
   def index
-    @cards = CardService.new({
-      link_path: 'categories',
-      tag_contraints: ['official-logo']
-    }).get_cards
+    @preview_topics = TopicListService.get_topics_by_category('5-category/7-category')
   end
 end
