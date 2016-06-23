@@ -1,6 +1,4 @@
-<p>
-<%= topic_list_item.title %>
-</p>
-<p>
-<%= raw topic_list_item.excerpt %>
-</p>
+<h2> <%= topic_list_item.title %> </h2>
+<%= link_to "Enter", topic_path(topic_list_item.id)%>
+<p> <%= raw topic_list_item.excerpt %> </p>
+

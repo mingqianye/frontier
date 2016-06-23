@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
-  get 'topic_controller/show'
+  get 'topics/show'
+  get 'topics/:id', to: 'topics#show', as: 'topic'
 
   get 'login',  to: 'sessions#new',     as: 'login'
   get 'logout', to: 'sessions#destroy', as: 'logout'
