@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
-  get 'topics/show'
+  get 'sitemap', :to => 'sitemap#index'
+
   get 'topics/:id', to: 'topics#show', as: 'topic'
 
   get 'login',  to: 'sessions#new',     as: 'login'
