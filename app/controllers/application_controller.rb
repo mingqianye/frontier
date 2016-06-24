@@ -11,4 +11,9 @@ class ApplicationController < ActionController::Base
   def user_logged_in?
     current_user.class == RegisteredUser
   end
+
+  def discourse_category
+    domain = request.domain
+    Settings.domain_mapping[domain]
+  end
 end
