@@ -8,7 +8,7 @@ class TopicListBuilder
 
     private
     def build_topic_list_item(topic_list_item_hash)
-      TopicListItem.new(topic_list_item_hash)
+      TopicListItemBuilder.new(topic_list_item_hash).build
     end
   end
 end

@@ -1,4 +1,5 @@
 <h2> <%= topic_list_item.title %> </h2>
 <%= link_to "Enter", topic_path(topic_list_item.id)%>
+<%= image_tag topic_list_item.image_url %>
 <p> <%= raw topic_list_item.excerpt %> </p>
 
