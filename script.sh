@@ -1,6 +1,7 @@
 #/bin/bash
 
 build() {
+  git pull
   docker build -t mingqianye/frontier:v0.1 -t mingqianye/frontier:latest .
 }
 
