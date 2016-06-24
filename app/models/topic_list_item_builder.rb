@@ -31,7 +31,7 @@ class TopicListItemBuilder
   end
 
   def thumbnail
-    relative_path = @item_hash.dig('thumbnails','retina')
+    relative_path = @item_hash.dig('thumbnails','normal')
     "#{Settings.discourse.host}/#{relative_path}"
   end
 end
