@@ -7,3 +7,9 @@ discourse:
 domain_mapping:
   'localhost': '5-category/7-category'
   'moonbbs.us': '5-category/7-category'
+sogou_scraper:
+  search_query: "http://weixin.sogou.com/weixin?type=1&query="
+  
+
+
+
