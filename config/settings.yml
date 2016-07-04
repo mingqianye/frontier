@@ -9,7 +9,5 @@ domain_mapping:
   'moonbbs.us': '5-category/7-category'
 sogou_scraper:
   search_query: "http://weixin.sogou.com/weixin?type=1&query="
-  
-
-
-
+  gong_zong_hao: 
+    "美国留学全方案": "5-category/7-category"

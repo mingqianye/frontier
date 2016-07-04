@@ -39,6 +39,8 @@ group :development, :test do
   gem 'byebug'
   gem 'watir'
   gem 'selenium-webdriver'
+  gem 'mechanize'
+  gem 'rspec-rails'
 end
 
 group :development do
