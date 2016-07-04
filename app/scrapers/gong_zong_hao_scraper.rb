@@ -13,14 +13,14 @@ class GongZongHaoScraper
     @browser.windows.last.use
     home_url = @browser.url
     @browser.h4s(class: 'weui_media_title').each do |article|
-      title = article.text
-      next if ArticleExistenceCheckService.exist?(title)
       url = article_url(article.attribute_value('hrefs'))
 
       agent = Mechanize.new
       agent.gzip_enabled = false
       page = agent.get(url)
-      ArticlePageScraper.new(page).scrape
+      extrator = PageContentExtractor.new(page.body)
+      CreateTopicService.exec(extrator.title, extrator.raw_content, @category)
+      byebug
     end
   end
 
