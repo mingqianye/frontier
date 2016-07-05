@@ -31,7 +31,8 @@ class TopicListItemBuilder
   end
 
   def thumbnail
-    relative_path = @item_hash.dig('thumbnails','normal')
+    path = @item_hash.dig('thumbnails','normal') || "https://www.google.com/logos/doodles/2016/lotte-reinigers-117th-birthday-5079873255112704.2-res.png"
+    return path if path.starts_with?('http')
     "#{Settings.discourse.host}/#{relative_path}"
   end
 end
