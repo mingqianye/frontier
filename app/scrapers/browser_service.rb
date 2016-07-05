@@ -14,6 +14,13 @@ class BrowserService
 
   def browser
     firefox
+    # phantomjs doesn't show chinese. maybe need to change outputEncoding to gb2312
+    # https://github.com/ariya/phantomjs/issues/11743
+    #phantomjs
+  end
+
+  def phantomjs
+    Watir::Browser.new :phantomjs
   end
 
   def firefox
