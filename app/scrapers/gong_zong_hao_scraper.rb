@@ -4,6 +4,8 @@ class GongZongHaoScraper
     @name = name.to_s
     @category = category
     @browser = browser
+    @agent = Mechanize.new
+    @agent.gzip_enabled = false
   end
 
   def run
@@ -15,12 +17,13 @@ class GongZongHaoScraper
     @browser.h4s(class: 'weui_media_title').each do |article|
       url = article_url(article.attribute_value('hrefs'))
 
-      agent = Mechanize.new
-      agent.gzip_enabled = false
-      page = agent.get(url)
-      extrator = PageContentExtractor.new(page.body)
-      CreateTopicService.exec(extrator.title, extrator.raw_content, @category)
-      byebug
+      begin
+        page = @agent.get(url)
+        extrator = PageContentExtractor.new(page.body.squish)
+        CreateTopicService.exec(extrator.title, extrator.raw_content, @category)
+      rescue Exception => ex
+        puts "Message: #{ex.message}"
+      end
     end
   end
 

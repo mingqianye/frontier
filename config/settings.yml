@@ -13,4 +13,6 @@ sogou_scraper:
     api_username: "crazyeditormiao"
     api_key: "285ff6c171ca40913730f1ed40e95800ebd41fb0fe8e408b9454afbad9ea5a95"
   gong_zong_hao: 
-    "美国留学全方案": "studyaboard"
+    "北美留学生":         7
+    "美国移民":           8
+    "旧金山湾区华人资讯": 9
